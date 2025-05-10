@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Diary</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="book-container">
+        <div class="book">
+            <div class="book-cover">
+                <h1>Diarya</h1>
+                <p class="subtitle">Catatan Perjalanan Hidup</p>
+                <div class="book-author">by Arya Wiratama</div>
+                <div class="open-book">
+                    <i class="fa-solid fa-book-open"></i> Buka Diary
+                </div>
+            </div>
+
+            <div class="book-content">
+                <nav class="book-nav">
+                    <div class="nav-item active" data-page="book">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Diary</span>
+                    </div>
+                    <div class="nav-item" data-page="about">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Tentang</span>
+                    </div>
+                    <div class="nav-item" data-page="song">
+                        <i class="fa-solid fa-music"></i>
+                        <span>Lagu</span>
+                    </div>
+                    <div class="nav-item" data-page="tech">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <span>Tech</span>
+                    </div>
+                    <div class="nav-item" data-page="gallery">
+                        <i class="fa-solid fa-images"></i>
+                        <span>Galeri</span>
+                    </div>
+                </nav>
+
+                <main class="book-pages">
+                    <!-- Halaman Diary -->
+                    <div class="page" id="book-page">
+                        <div class="page-header">
+                            <h2>Diary Entries</h2>
+                            <div class="page-number">1</div>
+                        </div>
+                        <div class="page-content">
+                            <div class="diary-entry">
+                                <div class="entry-date">10 Mei 2025</div>
+                                <h3>Hari yang Menyenangkan</h3>
+                                <p>Hari ini adalah hari yang indah. Pagi yang cerah dengan sinar matahari hangat menyambut saat aku membuka jendela kamar. Aku memutuskan untuk berjalan-jalan di taman kota dan menikmati udara segar. Beberapa burung bernyanyi dengan merdu, menambah keindahan suasana.</p>
+                                <p>Aku bertemu dengan beberapa teman lama dan kami mengobrol panjang tentang rencana masa depan. Rasanya menyenangkan bisa berkumpul dan berbagi cerita. Hari ini adalah pengingat betapa berharganya momen-momen sederhana dalam hidup.</p>
+                            </div>
+                            <div class="diary-entry">
+                                <div class="entry-date">8 Mei 2025</div>
+                                <h3>Belajar Hal Baru</h3>
+                                <p>Aku mulai mempelajari fotografi hari ini. Membeli kamera bekas tetapi masih dalam kondisi bagus. Ada banyak hal yang perlu dipelajari, tetapi aku sangat bersemangat. Mengambil gambar pertama di taman dekat rumah dan hasilnya cukup memuaskan untuk seorang pemula.</p>
+                                <p>Ada perasaan menyenangkan saat mempelajari keterampilan baru. Besok aku berencana untuk mengeksplorasi teknik pencahayaan dan komposisi dasar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Halaman Tentang -->
+                    <div class="page hidden" id="about-page">
+                        <div class="page-header">
+                            <h2>Tentang Saya</h2>
+                            <div class="page-number">2</div>
+                        </div>
+                        <div class="page-content">
+                            <div class="about-content">
+                                <div class="profile-image">
+                                    <img src="/api/placeholder/200/200" alt="Foto Profil" />
+                                </div>
+                                <div class="about-text">
+                                    <p>Halo! Saya adalah penulis diary ini. Saya suka menulis, membaca, dan menjelajahi hal-hal baru. Diary ini adalah tempat saya mencurahkan pikiran, perasaan, dan pengalaman hidup sehari-hari.</p>
+                                    <p>Saya percaya bahwa setiap momen dalam hidup memiliki cerita yang layak untuk diabadikan, tidak peduli seberapa kecil atau sederhana. Diary ini adalah kumpulan cerita-cerita tersebut.</p>
+                                    <p>Mari kita terus menuliskan kisah-kisah hidup dan menikmati perjalanan ini.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Halaman Lagu -->
+                    <div class="page hidden" id="song-page">
+                        <div class="page-header">
+                            <h2>Lagu Favorit</h2>
+                            <div class="page-number">3</div>
+                        </div>
+                        <div class="page-content">
+                            <div class="song-list">
+                                <div class="song-item">
+                                    <div class="song-icon"><i class="fa-solid fa-music"></i></div>
+                                    <div class="song-details">
+                                        <h3>Yesterday</h3>
+                                        <p>The Beatles</p>
+                                        <div class="song-note">Lagu ini mengingatkan saya pada masa kecil bersama keluarga.</div>
+                                    </div>
+                                </div>
+                                <div class="song-item">
+                                    <div class="song-icon"><i class="fa-solid fa-music"></i></div>
+                                    <div class="song-details">
+                                        <h3>Bintang di Surga</h3>
+                                        <p>Peterpan</p>
+                                        <div class="song-note">Melodi yang indah dan lirik yang menyentuh hati.</div>
+                                    </div>
+                                </div>
+                                <div class="song-item">
+                                    <div class="song-icon"><i class="fa-solid fa-music"></i></div>
+                                    <div class="song-details">
+                                        <h3>Fix You</h3>
+                                        <p>Coldplay</p>
+                                        <div class="song-note">Mendengarkan lagu ini memberi saya ketenangan saat sedang stres.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Halaman Tech -->
+                    <div class="page hidden" id="tech-page">
+                        <div class="page-header">
+                            <h2>Tech Notes</h2>
+                            <div class="page-number">4</div>
+                        </div>
+                        <div class="page-content">
+                            <div class="tech-list">
+                                <div class="tech-item">
+                                    <h3>Web Development</h3>
+                                    <div class="tech-tags">
+                                        <span class="tag">HTML</span>
+                                        <span class="tag">CSS</span>
+                                        <span class="tag">JavaScript</span>
+                                    </div>
+                                    <p>Belajar membuat website responsive dengan HTML, CSS, dan JavaScript. Sudah menyelesaikan beberapa proyek kecil dan terus meningkatkan keterampilan.</p>
+                                </div>
+                                <div class="tech-item">
+                                    <h3>Mobile Development</h3>
+                                    <div class="tech-tags">
+                                        <span class="tag">React Native</span>
+                                        <span class="tag">Flutter</span>
+                                    </div>
+                                    <p>Mulai mempelajari dasar-dasar pengembangan aplikasi mobile. Tertarik dengan cross-platform framework seperti React Native dan Flutter.</p>
+                                </div>
+                                <div class="tech-item">
+                                    <h3>AI & Machine Learning</h3>
+                                    <div class="tech-tags">
+                                        <span class="tag">Python</span>
+                                        <span class="tag">TensorFlow</span>
+                                    </div>
+                                    <p>Mengikuti beberapa kursus online tentang kecerdasan buatan dan machine learning. Masih dalam tahap pemula tapi sangat antusias untuk belajar lebih dalam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Halaman Galeri -->
+                    <div class="page hidden" id="gallery-page">
+                        <div class="page-header">
+                            <h2>Galeri Foto</h2>
+                            <div class="page-number">5</div>
+                        </div>
+                        <div class="page-content">
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="/api/placeholder/300/200" alt="Foto 1" />
+                                    <div class="gallery-caption">Petualangan di pegunungan</div>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="/api/placeholder/300/200" alt="Foto 2" />
+                                    <div class="gallery-caption">Sunset di pantai</div>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="/api/placeholder/300/200" alt="Foto 3" />
+                                    <div class="gallery-caption">Kafe favorit</div>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="/api/placeholder/300/200" alt="Foto 4" />
+                                    <div class="gallery-caption">Perjalanan ke luar kota</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+                <div class="book-footer">
+                    <div class="page-nav">
+                        <button class="prev-page"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="next-page"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                    <div class="book-close">
+                        <i class="fa-solid fa-book"></i> Tutup Diary
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
