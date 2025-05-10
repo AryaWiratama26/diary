@@ -84,6 +84,56 @@ class Component {
 
         return galleryItem;
     }
+
+    createBookItem(title, author, description, rating, coverSrc = '/api/placeholder/100/140') {
+        const bookItem = document.createElement('div');
+        bookItem.className = 'book-item';
+    
+        const coverContainer = document.createElement('div');
+        coverContainer.className = 'book-cover-img';
+        
+        const coverImg = document.createElement('img');
+        coverImg.src = coverSrc;
+        coverImg.alt = `Cover buku ${title}`;
+        coverContainer.appendChild(coverImg);
+        
+        const bookInfo = document.createElement('div');
+        bookInfo.className = 'book-info';
+        
+        const titleEl = document.createElement('h3');
+        titleEl.textContent = title;
+        
+        const authorEl = document.createElement('div');
+        authorEl.className = 'book-author';
+        authorEl.textContent = `oleh ${author}`;
+        
+        const descEl = document.createElement('p');
+        descEl.className = 'book-description';
+        descEl.textContent = description;
+        
+        const ratingEl = document.createElement('div');
+        ratingEl.className = 'book-rating';
+        
+        let starsHTML = '';
+        for (let i = 0; i < 5; i++) {
+            if (i < rating) {
+                starsHTML += '<i class="fa-solid fa-star"></i>';
+            } else {
+                starsHTML += '<i class="fa-regular fa-star"></i>';
+            }
+        }
+        ratingEl.innerHTML = starsHTML;
+        
+        bookInfo.appendChild(titleEl);
+        bookInfo.appendChild(authorEl);
+        bookInfo.appendChild(descEl);
+        bookInfo.appendChild(ratingEl);
+        
+        bookItem.appendChild(coverContainer);
+        bookItem.appendChild(bookInfo);
+        
+        return bookItem;
+    }
 }
 
 class PageManager {
@@ -192,8 +242,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    
+
     function loadDynamicContent() {
         console.log('Loading dynamic content...');
+        
+        const booksList = document.querySelector('.books-list');
+        if (booksList) {
+            const books = [
+                {
+                    title: 'Nunci : Membaca pikiran dan perasaan orang lain',
+                    author: 'Euny Hong',
+                    description: 'Buku tentang bagaimana cara kita bisa membaca ruangan atau lingkungan, mempunyai nunchi dengan cepat dll',
+                    rating: 5,
+                    cover: '/assets/img/nunchi.jpg'
+                },
+            ];
+            
+            books.forEach(book => {
+                const bookItem = component.createBookItem(
+                    book.title, 
+                    book.author, 
+                    book.description, 
+                    book.rating,
+                    book.cover 
+                );
+                booksList.appendChild(bookItem);
+            });
+        }
     }
 
     function initApp() {
