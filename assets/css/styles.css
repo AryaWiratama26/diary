@@ -475,6 +475,10 @@ body {
     background-color: #e9e9e9;
 }
 
+audio {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .about-content {
         flex-direction: row;
@@ -488,6 +492,7 @@ body {
     .about-text p {
         text-align: left;
     }
+
 }
 
 @media (max-width: 767px) {
@@ -506,6 +511,7 @@ body {
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
+    
 }
 
 @media (max-width: 480px) {
