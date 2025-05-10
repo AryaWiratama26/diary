@@ -205,6 +205,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevPageBtn = document.querySelector('.prev-page');
     const nextPageBtn = document.querySelector('.next-page');
 
+    const musicControl = document.getElementById('musicControl');
+    const musicIcon = document.getElementById('musicIcon');
+    const audioElement = document.querySelector('audio');
+
+    let isPlaying = false;
+
+    musicControl.addEventListener('click', () => {
+        if (isPlaying) {
+            audioElement.pause();
+            musicIcon.className = 'fa-solid fa-play';
+        } else {
+            audioElement.play();
+            musicIcon.className = 'fa-solid fa-pause';
+        }
+        isPlaying = !isPlaying;
+    });
+
+    audioElement.addEventListener('playing', () => {
+        isPlaying = true;
+        musicIcon.className = 'fa-solid fa-pause';
+    });
+
+    audioElement.addEventListener('pause', () => {
+        isPlaying = false;
+        musicIcon.className = 'fa-solid fa-play';
+    });
+
     const component = new Component();
     const pageManager = new PageManager();
 
