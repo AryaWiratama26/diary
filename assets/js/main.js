@@ -272,8 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     function loadDynamicContent() {
-        console.log('Loading dynamic content...');
-        
         const booksList = document.querySelector('.books-list');
         if (booksList) {
             const books = [
@@ -283,6 +281,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     description: 'Buku tentang bagaimana cara kita bisa membaca ruangan atau lingkungan, mempunyai nunchi dengan cepat dll',
                     rating: 5,
                     cover: '/assets/img/nunchi.jpg'
+                },
+                {
+                    title: 'Berani Tidak Disukai',
+                    author: 'Ichiro Kishimi',
+                    description: '-',
+                    rating: 4.5,
+                    cover: '/assets/img/btd.jpg'
+                },
+                {
+                    title: 'Madilog',
+                    author: 'Tan Malaka',
+                    description: '-',
+                    rating: 5,
+                    cover: '/assets/img/madilog.jpg'
                 },
             ];
             
